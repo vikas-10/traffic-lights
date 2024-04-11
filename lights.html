@@ -16,9 +16,13 @@
   .container {
     position: relative;
     display: flex;
-    justify-content: space-between; 
+    justify-content: center; 
     align-items: center;
-    margin: 200px; 
+    margin: 50px; 
+    background-color: rgb(70, 70, 96);
+    padding: 50px;
+    box-shadow: 20px 20px 5px 10px #888888;
+    border-radius: 10%;
   }
 
   .traffic-light {
@@ -32,6 +36,7 @@
     align-items: center;
     padding: 20px ;
     box-sizing: border-box;
+    
   }
 
   .light {
@@ -49,7 +54,7 @@
   #all:checked~.traffic-light .red{background-color:red;}
   #all:checked~.traffic-light .yellow{background-color:yellow;}
   #all:checked~.traffic-light .green{background-color:green;}
-  #alt:checked~.traffic-light .green{background-color:green;}
+  
   /*for buttons*/
   
   .button-container {
@@ -58,21 +63,25 @@
     align-items: flex-start; 
   }
   
-    #red:checked~.button-container label[for= "red"]{
-      background-color: red;
-    }
-    #yellow:checked~.button-container label[for= "yellow"]{
-      background-color: yellow;
-    }
-    #green:checked~.button-container label[for= "green"]{
-      background-color: green;
-    }
-    #all:checked~.button-container label[for= "all"]{
-      background-color: blue;
-    }
-    #alt:checked~.button-container label[for= "alt"]{
+  #red:checked~.button-container label[for= "red"]{
+    background-color: red;
+  }
+  #yellow:checked~.button-container label[for= "yellow"]{
+    background-color: yellow;
+  }
+  #green:checked~.button-container label[for= "green"]{
+    background-color: green;
+  }
+  #all:checked~.button-container label[for= "all"]{
+    background-color: blue;
+  }
+  #alt:checked~.button-container label[for="alt"] {
+    animation: infinite;
+    background-color: pink;
+  }
+    /*#alt:checked~.button-container label[for= "alt"]{
       background-color: pink;
-    }
+    }*/
   
   .button {
     margin: 10px;
@@ -92,12 +101,66 @@
     margin-top: 10px; 
   }
   
-  /* Hide checkbox */
   input[type="radio"] {
     display: none;
   }
-  
-  
+ 
+#alt:checked~.traffic-light .red {
+    animation: alt-red 2s infinite;
+    transition: 5s;
+    background-color: red;
+}
+
+#alt:checked~.traffic-light .yellow {
+    animation: alt-yellow 2s infinite;
+    transition: 5s;
+    background-color: yellow;
+}
+
+#alt:checked~.traffic-light .green {
+    animation: alt-green 2s infinite;
+    transition: 5s;
+    background-color: green;
+}
+
+@keyframes alt-red {
+    0% {
+        background-color: red;
+    }
+    30% {
+        background-color: #fff;
+    }
+
+    100% {
+        background-color: #fff;
+    }
+}
+@keyframes alt-yellow {
+    0% {
+        background-color: #fff;
+    }
+    33.33% {
+        background-color: yellow;
+    }
+    100% {
+        background-color: #fff;
+    }
+}
+@keyframes alt-green {
+    0% {
+        background-color: #fff;
+    }
+    30% {
+        background-color: #fff;
+    }
+    66.66% {
+        background-color: green;
+    }
+
+    100% {
+        background-color: #fff;
+    }
+}  
 </style>
 </head>
 <body> 
