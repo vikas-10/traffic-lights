@@ -10,5 +10,5 @@ This Project is made only using HTML and CSS**</br>
 10 april :  build the structure of the lights and added functionality of the buttons , lights are succesfully turning on.</br>
           
 11 April : currently working on alt button and the toggle button</br> 
-12 April : toggle button and alt button are functional now
+12 April : toggle button and alt button are functional now    --------- Task Completed
 
